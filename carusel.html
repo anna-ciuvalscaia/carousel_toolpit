@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <title>Carousel CSS positions relative</title>
+    <style>
+        body {
+            background-color: #333333;
+        }
+        #carousel {
+            background-color: #2C2B2D;
+            width: 1260px;
+            margin: auto;
+        }
+        #carousel .slide img {
+            vertical-align: middle;
+            position: relative;
+            margin-top: 50px;
+            margin-bottom: 10px;
+            box-shadow: 0 0 5px 3px #111111;
+        }
+        #carousel .slide img:nth-child(3) {
+            width: 400px;
+            z-index: 1;
+        }
+        #carousel .slide img:nth-child(2) {
+            left:48px;
+            }
+            #carousel .slide img:nth-child(4) {
+            right:45px;
+            }  
+        #carousel .slide img:nth-of-type(even) {
+            width: 350px;
+            opacity: 0.75;
+        }
+        #carousel .slide img:hover:nth-of-type(even) {
+            opacity: 1;
+
+        }
+        #carousel .slide .arrow_left {
+            left: 60px;
+            box-shadow: none;
+        }
+        #carousel .slide .arrow_right {
+            left: -60px;
+            box-shadow: none;
+        } 
+        #carousel .puncte {
+            width: 100%;
+            text-align: center;
+        }
+        #carousel .puncte .circle {
+            display: inline-block;
+           margin: 5px;
+            border: 3px solid #379A37;
+            width: 20px;
+            height: 20px;
+            border-radius: 100%;
+            margin-bottom: 30px;
+
+        }
+        #carousel .puncte .circle_small {
+           /* border: 3px solid #379A37;*/
+           background-color: #379A37;
+            width: 16px;
+            height: 16px;
+            border-radius: 100%;   
+            position: relative;
+           right: -2px;
+            top: 2px; 
+        }
+
+
+    </style>
+</head>
+<body>
+  <div id="carousel">
+      <div class="slide">
+          <img class="arrow_left" src="images_carousel/Actions-arrow-left-icon.png" alt="arrow left">
+          <img src="images_carousel/4.jpg" alt="1">
+          <img src="images_carousel/1_2.jpg" alt="2">
+          <img src="images_carousel/1.jpg" alt="3">
+          <img class="arrow_right" src="images_carousel/Actions-arrow-right-icon.png" alt="arrow left">
+
+      </div>
+      <div class="puncte">
+          <div class="circle"></div>
+          <div class="circle">
+              <div class="circle_small"></div>
+          </div>
+          <div class="circle"></div>
+      </div>
+  </div>  
+</body>
+</html>
